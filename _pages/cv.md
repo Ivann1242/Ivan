@@ -11,54 +11,59 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **B.S. in Data Science**, University of Michigan, Ann Arbor — Expected Winter 2028
+  * Research Interests: Reinforcement Learning, Language Models, Group Theory
+* **Visiting Student**, Yale University — 2024 summer
+  * Algorithm
 
-Work experience
+Research Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **Terminal-Bench Science** — Co-author & Contributor (Apr 2026 – Present)
+  * Developed the Structure2Discover task series to evaluate AI agents on inferring hidden structures from computational evidence.
+  * [Project announcement](https://www.tbench.ai/news/tb-science-announcement)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* **Hybrid Transformer Analysis in Induction Head Problem** — University of Michigan (Sep 2025 – Dec 2025)
+  * Mentor: Dr. Samet Oymak
+  * Studied generalization of sequence models on the Associative Recall task; proposed hybrid SSM + attention architectures.
+  * [GitHub](https://github.com/Ivann1242/Analysis-AR-problem)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Contact Sensing Hexapod** — BIRDs Lab, University of Michigan (Jan 2026 – Present)
+  * Mentor: Shai Revzen
+  * Large-scale MuJoCo simulation for multi-legged robotic locomotion across varying leg counts and terrains.
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
+* **TITO (Translation-Invariant Total Orders)** — University of Michigan (Sep 2025 – Apr 2026)
+  * Advisor: Dr. Grant Barkley
+  * Formalized order-comparability through inversion sets; built Python package for weak order comparison and visualization.
+  * [LoGM project page](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html)
+
+* **ThinkAct LLM Agent** — University of Michigan (Sep 2025 – Dec 2025)
+  * Mentor: Dr. Samet Oymak
+  * Improved LLM reasoning via self-reflection and self-consistency within ReAct.
+  * [GitHub](https://github.com/Ivann1242/ThinkAct)
+
+Teaching Experience
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
+
+Skills
 ======
-* Currently signed in to 43 different slack teams
+* **Languages:** Python, C, C++, Java, JavaScript, MIPS
+* **Tools:** GitHub Actions, Jupyter Notebook, Colab, Google Cloud Platform, LaTeX
+
+Portfolio
+======
+  <ul>{% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}{% for post in sorted_portfolio %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+
+Honors & Leadership
+======
+* **University of Michigan SURE 2026** — Summer Undergraduate Research Experience fellowship
+* **University of Pittsburgh NOUR 2025** — Summer Research Scholar, School of Computing and Information
+* **Tartanhacks 2026** — Led team of 4; Top 5 grant among 300+ projects. [GitHub](https://github.com/danielryang/spaceoverflow)
+* **CAST-USA 33rd Innovation Summit** — Finalist, $1,500 award
+* **She Innovations Hackathon** — Led team of 3 to build a 3D runner game in Unity/C#
+
+[Download full CV (PDF)]({{ base_path }}/files/Yifan_Jing_Research_Resume.pdf)

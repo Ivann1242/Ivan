@@ -1,152 +1,165 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Yifan Jing（敬益凡）",
+    "email": "ivaning@umich.edu",
+    "phone": "(+1) 412-654-0901",
+    "website": "https://ivann1242.github.io/Ivan",
+    "summary": "Undergraduate Data Science student at the University of Michigan. Research interests include reinforcement learning, language models, and group theory.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Ann Arbor",
       "countryCode": "US",
-      "region": ""
+      "region": "Michigan"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "Ivann1242",
+        "url": "https://github.com/Ivann1242"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "Terminal-Bench Science",
+      "position": "Co-author & Contributor",
+      "website": "https://www.tbench.ai/news/tb-science-announcement",
+      "startDate": "2026-04",
+      "endDate": "",
+      "summary": "Developed the Structure2Discover task series to evaluate AI agents on inferring hidden structures from computational evidence.",
+      "highlights": []
+    },
+    {
+      "company": "University of Michigan — BIRDs Lab",
+      "position": "Undergraduate Researcher",
+      "website": "https://arxiv.org/abs/2603.09147",
+      "startDate": "2026-01",
+      "endDate": "",
+      "summary": "Large-scale MuJoCo simulation for multi-legged robotic locomotion. Mentor: Shai Revzen.",
+      "highlights": []
+    },
+    {
+      "company": "University of Michigan",
+      "position": "Researcher",
+      "website": "https://github.com/Ivann1242/Analysis-AR-problem",
+      "startDate": "2025-09",
+      "endDate": "2025-12",
+      "summary": "Hybrid Transformer analysis on the Associative Recall problem. Mentor: Dr. Samet Oymak.",
+      "highlights": []
+    },
+    {
+      "company": "University of Michigan — LoGM",
+      "position": "Researcher",
+      "website": "https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html",
+      "startDate": "2025-09",
+      "endDate": "2026-04",
+      "summary": "Translation-Invariant Total Orders (TITO) algorithms. Advisor: Dr. Grant Barkley.",
+      "highlights": []
+    },
+    {
+      "company": "University of Michigan",
+      "position": "Co-contributor",
+      "website": "https://github.com/Ivann1242/ThinkAct",
+      "startDate": "2025-09",
+      "endDate": "2025-12",
+      "summary": "ThinkAct LLM Agent with self-reflection and self-consistency. Mentor: Dr. Samet Oymak.",
+      "highlights": []
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "University of Michigan",
+      "area": "Data Science",
+      "studyType": "B.S.",
+      "startDate": "2025",
+      "endDate": "2028",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "institution": "Yale University",
+      "area": "",
+      "studyType": "Visiting Student",
+      "startDate": "2024-06",
+      "endDate": "2024-08",
       "gpa": null,
       "courses": []
     }
   ],
-  "skills": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": ["Python", "C", "C++", "Java", "JavaScript", "MIPS"]
+    },
+    {
+      "name": "Tools",
+      "level": "",
+      "keywords": ["GitHub Actions", "Jupyter Notebook", "Colab", "Google Cloud Platform", "LaTeX"]
+    }
+  ],
   "languages": [],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Research",
+      "keywords": ["Reinforcement Learning", "Language Models", "Group Theory"]
+    }
+  ],
   "references": [],
-  "publications": [
-    {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
-    }
-  ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
+  "publications": [],
+  "presentations": [],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "course": "Intermediate Programming",
+      "institution": "University of Pittsburgh",
+      "date": "2024-08-01",
+      "role": "Undergraduate Teaching Assistant",
+      "description": "Lectured 125+ students; taught Java in office hours, recitations, and exam prep."
     }
   ],
   "portfolio": [
     {
-      "name": "Portfolio item number 1",
+      "name": "Terminal-Bench Science — Structure2Discover",
       "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "date": "2026-04-01",
+      "url": "https://www.tbench.ai/news/tb-science-announcement",
+      "description": "Benchmark tasks for AI scientific structure discovery."
+    },
+    {
+      "name": "Hybrid Transformer Analysis — Associative Recall",
+      "category": "portfolio",
+      "date": "2025-12-01",
+      "url": "https://github.com/Ivann1242/Analysis-AR-problem",
+      "description": "Comparing Transformer, Mamba, and hybrid architectures on AR generalization."
+    },
+    {
+      "name": "TITO — Translation-Invariant Total Orders",
+      "category": "portfolio",
+      "date": "2025-11-01",
+      "url": "https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html",
+      "description": "Algorithmic approach for translation-invariant total orders."
+    },
+    {
+      "name": "ThinkAct LLM Agent",
+      "category": "portfolio",
+      "date": "2025-10-01",
+      "url": "https://github.com/Ivann1242/ThinkAct",
+      "description": "Self-reflection and self-consistency in the ReAct framework."
+    }
+  ],
+  "awards": [
+    {
+      "title": "SURE 2026 Fellowship",
+      "date": "2026",
+      "awarder": "University of Michigan",
+      "summary": "Summer Undergraduate Research Experience fellowship."
+    },
+    {
+      "title": "NOUR Summer Research Scholar",
+      "date": "2025",
+      "awarder": "University of Pittsburgh School of Computing and Information",
+      "summary": "Selected for the NOUR summer research program."
     }
   ]
 }
