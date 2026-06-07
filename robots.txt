@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ivann1242.github.io/Ivan/sitemap.xml

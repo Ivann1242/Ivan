@@ -1,13 +1,14 @@
 ---
 permalink: /
-title: "About Me"
+title: "Yifan Jing（敬益凡）"
+description: "Personal homepage of Yifan Jing (敬益凡, Ivan Jing), undergraduate Data Science researcher at the University of Michigan."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am **Yifan Jing（敬益凡）**, an undergraduate student in **Data Science** at the [University of Michigan, Ann Arbor](https://umich.edu/), expected to graduate in **Fall 2027 or Winter 2027**. I previously studied as a **Visiting Student** at [Yale University](https://www.yale.edu/) (2024 Summer).
+I am **Yifan Jing（敬益凡）** (also **Ivan Jing**), an undergraduate student in **Data Science** at the [University of Michigan, Ann Arbor](https://umich.edu/), expected to graduate in **Fall 2027 or Winter 2027**. I previously studied as a **Visiting Student** at [Yale University](https://www.yale.edu/) (2024 Summer).
 
 My research interests lie at the intersection of **reinforcement learning**, **language models**, and **group theory**. I am particularly interested in how sequence models generalize, how AI agents can perform scientific reasoning in terminal-based environments, and how algebraic structures can inform algorithm design.
 

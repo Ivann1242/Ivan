@@ -12,7 +12,8 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Yifan Jing（敬益凡）"
 title_separator          : "-"
 name                     : &name "Yifan Jing（敬益凡）"
-description              : &description "Undergraduate researcher at University of Michigan studying Data Science, with interests in reinforcement learning, language models, and group theory."
+description              : &description "Yifan Jing (敬益凡, Ivan Jing) — undergraduate Data Science researcher at the University of Michigan. Research interests: reinforcement learning, language models, and group theory."
+keywords                 : "Yifan Jing, Ivan Jing, 敬益凡, University of Michigan, Data Science, reinforcement learning, language models, group theory"
 url                      : https://ivann1242.github.io
 baseurl                  : "/Ivan"
 repository               : "Ivann1242/Ivan"
@@ -142,14 +143,21 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : profile.png
+og_description           : *description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Yifan Jing（敬益凡）"
+  alternate_names:
+    - "Yifan Jing"
+    - "Ivan Jing"
+    - "敬益凡"
+  links:
+    - https://ivann1242.github.io/Ivan/
+    - https://github.com/Ivann1242
+    - https://www.linkedin.com/in/ivanjing
 
 
 # Analytics
