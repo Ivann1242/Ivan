@@ -17,7 +17,7 @@ My Current Research
  * [Terminal-Bench Science](https://www.tbench.ai/news/tb-science-announcement), developing structure2discover series benchmark tasks that evaluate frontier AI agents on scientific workflow.
  * RLHF research advised by Prof. [Lei Ying](https://leiying.engin.umich.edu/post-docs-students/)
  * Robotics simulation at the BIRDs Lab, already shipped [Contact Sensing Hexapod](https://arxiv.org/abs/2603.09147)
- * [Translation-Invariant Total Orders](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html) with Dr. Grant Barkley, already shipped a sage math [package](https://github.com/emmaycl/TITO_Explore_package) and [paper draft]({{ site.baseurl }}/files/TITO_Package_Paper_Draft.pdf), target FPSAC 2027.
+ * [Translation-Invariant Total Orders](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html) under Dr. Grant Barkley's supervision, already shipped a sage math [package](https://github.com/emmaycl/TITO_Explore_package) and [paper]({{ site.baseurl }}/files/TITO_Package_Paper_Draft.pdf), planning to post on arxiv soon, target to publish on FPSAC 2027.
 
 News
 ======
