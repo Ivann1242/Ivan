@@ -34,7 +34,7 @@ Research Experience
 * **TITO (Translation-Invariant Total Orders)** — University of Michigan (Sep 2025 – Apr 2026)
   * Advisor: Dr. Grant Barkley
   * Formalized order-comparability through inversion sets; built Python package for weak order comparison and visualization.
-  * [LoGM project page](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html) · [Paper]({{ base_path }}/files/TITO_Package_Paper_Draft.pdf)
+  * [LoGM project page](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html) · [arXiv:2607.11709](https://arxiv.org/abs/2607.11709)
 
 * **ThinkAct LLM Agent** — University of Michigan (Sep 2025 – Dec 2025)
   * Mentor: Dr. Samet Oymak
@@ -51,6 +51,12 @@ Skills
 ======
 * **Languages:** Python, C, C++, Java, JavaScript, MIPS
 * **Tools:** GitHub Actions, Jupyter Notebook, Colab, Google Cloud Platform, LaTeX
+
+Publications
+======
+  <ul>{% for post in site.publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
 
 Portfolio
 ======
