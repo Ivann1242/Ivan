@@ -22,15 +22,6 @@
   },
   "work": [
     {
-      "company": "Terminal-Bench Science",
-      "position": "Co-author & Contributor",
-      "website": "https://www.tbench.ai/news/tb-science-announcement",
-      "startDate": "2026-04",
-      "endDate": "",
-      "summary": "Developed the Structure2Discover task series to evaluate AI agents on inferring hidden structures from computational evidence.",
-      "highlights": []
-    },
-    {
       "company": "University of Michigan — BIRDs Lab",
       "position": "Undergraduate Researcher",
       "website": "https://arxiv.org/abs/2603.09147",
@@ -119,13 +110,6 @@
     }
   ],
   "portfolio": [
-    {
-      "name": "Terminal-Bench Science — Structure2Discover",
-      "category": "portfolio",
-      "date": "2026-04-01",
-      "url": "https://www.tbench.ai/news/tb-science-announcement",
-      "description": "Benchmark tasks for AI scientific structure discovery."
-    },
     {
       "name": "Hybrid Transformer Analysis — Associative Recall",
       "category": "portfolio",

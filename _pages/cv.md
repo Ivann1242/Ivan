@@ -18,10 +18,6 @@ Education
 
 Research Experience
 ======
-* **Terminal-Bench Science** — Co-author & Contributor (Apr 2026 – Present)
-  * Developed the Structure2Discover task series to evaluate AI agents on inferring hidden structures from computational evidence.
-  * [Project announcement](https://www.tbench.ai/news/tb-science-announcement)
-
 * **Hybrid Transformer Analysis in Induction Head Problem** — University of Michigan (Sep 2025 – Dec 2025)
   * Mentor: Dr. Samet Oymak
   * Studied generalization of sequence models on the Associative Recall task; proposed hybrid SSM + attention architectures.
