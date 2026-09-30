@@ -12,8 +12,8 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Yifan Jing（敬益凡）"
 title_separator          : "-"
 name                     : &name "Yifan Jing（敬益凡）"
-description              : &description "Yifan Jing (敬益凡, Ivan Jing) — undergraduate Data Science researcher at the University of Michigan. Research interests: reinforcement learning, language models, and group theory."
-keywords                 : "Yifan Jing, Ivan Jing, 敬益凡, University of Michigan, Data Science, reinforcement learning, language models, group theory"
+description              : &description "Yifan Jing (敬益凡, Ivan Jing) — Data Science undergraduate at the University of Michigan and research intern at Princeton Z Lab. Research interests: AI scientist systems, multimodal and LLM reasoning, and AI evaluation."
+keywords                 : "Yifan Jing, Ivan Jing, 敬益凡, University of Michigan, Princeton, Data Science, AI scientist, multimodal reasoning, LLM reasoning, AI evaluation"
 url                      : https://ivann1242.github.io
 baseurl                  : "/Ivan"
 repository               : "Ivann1242/Ivan"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Yifan Jing（敬益凡）"
   pronouns         : # example: "she/her"  
-  bio              : "B.S. in Data Science @ University of Michigan. Research interests: Reinforcement Learning, Language Models, Group Theory."
+  bio              : "Data Science @ University of Michigan. Research intern @ Princeton Z Lab. AI scientist systems, multimodal and LLM reasoning, AI evaluation."
   location         : "Ann Arbor, Michigan"
   employer         : "University of Michigan"
   uri              : # URL

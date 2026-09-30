@@ -4,7 +4,7 @@
     "email": "ivaning@umich.edu",
     "phone": "(+1) 412-654-0901",
     "website": "https://ivann1242.github.io/Ivan",
-    "summary": "Undergraduate Data Science student at the University of Michigan. Research interests include reinforcement learning, language models, and group theory.",
+    "summary": "Undergraduate Data Science student at the University of Michigan, expected to graduate in 2027. Research interests include multimodal reasoning, LLM reasoning, AI scientist systems, and AI evaluation.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -22,13 +22,52 @@
   },
   "work": [
     {
+      "company": "Princeton University — Z Lab",
+      "position": "Research Intern",
+      "website": "",
+      "startDate": "2026-07",
+      "endDate": "Present",
+      "summary": "Advisor: Prof. Zhuang Liu.",
+      "highlights": [
+        "Investigating multimodal reasoning through systematic evaluations and controlled ablations; a manuscript is under review at ICLR 2027 (title withheld).",
+        "Developing AI scientist systems and self-evolving agents that autonomously propose, evaluate, and iteratively improve reasoning strategies and scientific solutions."
+      ]
+    },
+    {
+      "company": "Terminal-Bench Science",
+      "position": "Contributor",
+      "website": "https://github.com/harbor-framework/terminal-bench-science/pull/1257",
+      "startDate": "2026-04",
+      "endDate": "Present",
+      "summary": "Developing mathematical discovery and formal reasoning tasks for evaluating frontier AI agents.",
+      "highlights": [
+        "1 task accepted for inclusion: Cambrian projection in Lean 4, with domain, technical, and final review approved as of September 22, 2026.",
+        "Built a complete reference proof and isolated verifier for Reading's maximality theorem on arbitrary Coxeter systems."
+      ]
+    },
+    {
+      "company": "University of Michigan — SURE 2026",
+      "position": "Undergraduate Researcher",
+      "website": "",
+      "startDate": "2026-05",
+      "endDate": "2026-08",
+      "summary": "Advisor: Prof. Lei Ying.",
+      "highlights": [
+        "Developed HintFlow, training a 4B language-model policy to guide frozen 14B–20B reasoning models through selective supervised fine-tuning and a modified GRPO objective.",
+        "Built the end-to-end training and inference pipeline using Qwen3, GPT-OSS-20B, LoRA, and vLLM."
+      ]
+    },
+    {
       "company": "University of Michigan — BIRDs Lab",
       "position": "Undergraduate Researcher",
       "website": "https://arxiv.org/abs/2603.09147",
       "startDate": "2026-01",
-      "endDate": "",
-      "summary": "Large-scale MuJoCo simulation for multi-legged robotic locomotion. Mentor: Shai Revzen.",
-      "highlights": []
+      "endDate": "Present",
+      "summary": "Contact Sensing Hexapod. Advisor: Prof. Shai Revzen. Simulation contributor to arXiv:2603.09147.",
+      "highlights": [
+        "Developed large-scale MuJoCo simulations for multi-legged locomotion, evaluating modular controllers across varying morphologies and irregular terrain conditions.",
+        "Developing an efficient control pipeline that uses LLM-guided search to distill a high-capacity neural policy into an interpretable finite-state machine."
+      ]
     },
     {
       "company": "University of Michigan",
@@ -45,8 +84,11 @@
       "website": "https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html",
       "startDate": "2025-09",
       "endDate": "2026-04",
-      "summary": "Translation-Invariant Total Orders (TITO) algorithms. Advisor: Dr. Grant Barkley.",
-      "highlights": []
+      "summary": "Completed Translation-Invariant Total Orders (TITO) research. Advisor: Dr. Grant Barkley.",
+      "highlights": [
+        "Formalized order-comparability through inversion sets and implemented weak order comparison, joins, normalization, and visualization in SageMath.",
+        "Released the TITO_Explore SageMath package and arXiv:2607.11709; targeting FPSAC 2027."
+      ]
     },
     {
       "company": "University of Michigan",
@@ -64,7 +106,7 @@
       "area": "Data Science",
       "studyType": "B.S.",
       "startDate": "2025",
-      "endDate": "2028",
+      "endDate": "2027",
       "gpa": null,
       "courses": []
     },
@@ -82,23 +124,66 @@
     {
       "name": "Programming Languages",
       "level": "",
-      "keywords": ["Python", "C", "C++", "Java", "JavaScript", "MIPS"]
+      "keywords": [
+        "Python (JAX, PyTorch, NumPy)",
+        "C",
+        "C++",
+        "Java",
+        "HTML",
+        "JavaScript",
+        "MIPS"
+      ]
+    },
+    {
+      "name": "Engineering",
+      "level": "",
+      "keywords": [
+        "MuJoCo",
+        "Linux"
+      ]
     },
     {
       "name": "Tools",
       "level": "",
-      "keywords": ["GitHub Actions", "Jupyter Notebook", "Colab", "Google Cloud Platform", "LaTeX"]
+      "keywords": [
+        "GitHub Actions",
+        "Jupyter Notebook",
+        "Colab",
+        "Google Cloud Platform",
+        "LaTeX",
+        "Coding Agents"
+      ]
     }
   ],
   "languages": [],
   "interests": [
     {
       "name": "Research",
-      "keywords": ["Reinforcement Learning", "Language Models", "Group Theory"]
+      "keywords": [
+        "Multimodal Reasoning",
+        "LLM Reasoning",
+        "AI Scientist Systems",
+        "AI Evaluation"
+      ]
     }
   ],
   "references": [],
-  "publications": [],
+  "publications": [
+    {
+      "name": "Manuscript under review (title withheld)",
+      "publisher": "ICLR 2027 — under review",
+      "releaseDate": "2026",
+      "website": "",
+      "summary": "Multimodal reasoning research at Princeton University."
+    },
+    {
+      "name": "Computing Tools for Translation-Invariant Total Orders",
+      "publisher": "arXiv preprint",
+      "releaseDate": "2026-07-13",
+      "website": "https://arxiv.org/abs/2607.11709",
+      "summary": "Yifan Jing, Emma Yicheng Lou, Shaotian Sun, and Yuxuan Wu. SageMath tools for weak order comparison, joins, normalization, and visualization. Targeting FPSAC 2027."
+    }
+  ],
   "presentations": [],
   "teaching": [
     {
@@ -110,6 +195,20 @@
     }
   ],
   "portfolio": [
+    {
+      "name": "AI-Assisted Discovery — Pure-Loss Converse Counterexample",
+      "category": "portfolio",
+      "date": "2026-09-23",
+      "url": "https://ivann1242.github.io/Ivan/portfolio/2026-pure-loss-counterexample/",
+      "description": "With Yue Tu and six parallel AI agents, constructed a general family of counterexamples to a candidate pure-loss second-order converse and verified the disproof in Lean 4. The candidate arose from a question posed by Mark M. Wilde, Joseph M. Renes, and Saikat Guha in 2014, 12 years earlier. QIQCOP credits Yue Tu and Yifan Jing and lists the problem as solved."
+    },
+    {
+      "name": "Terminal-Bench Science — Cambrian Projection",
+      "category": "portfolio",
+      "date": "2026-09-22",
+      "url": "https://ivann1242.github.io/Ivan/portfolio/2026-terminal-bench-science/",
+      "description": "1 task accepted for inclusion, with domain, technical, and final review approved on September 22, 2026. Lean 4 formalization of Cambrian projection with a complete reference proof and isolated verifier; PR #1257."
+    },
     {
       "name": "Hybrid Transformer Analysis — Associative Recall",
       "category": "portfolio",
@@ -144,6 +243,24 @@
       "date": "2025",
       "awarder": "University of Pittsburgh School of Computing and Information",
       "summary": "Selected for the NOUR summer research program."
+    },
+    {
+      "title": "Tartanhacks 2026 — Top 5 Grant",
+      "date": "2026",
+      "awarder": "Carnegie Mellon University",
+      "summary": "Led a team of 4; Top 5 grant among 300+ projects."
+    },
+    {
+      "title": "CAST-USA 33rd Innovation Summit — Finalist",
+      "date": "",
+      "awarder": "CAST-USA",
+      "summary": "Finalist, $1,500 award. Presented the CEEG AI Agent business plan to an audience of 300."
+    },
+    {
+      "title": "She Innovations Hackathon",
+      "date": "",
+      "awarder": "",
+      "summary": "Led a team of 3 to build a 3D runner game in Unity/C#."
     }
   ]
 }
