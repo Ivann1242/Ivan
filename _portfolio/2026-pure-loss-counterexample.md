@@ -1,12 +1,14 @@
 ---
 title: "AI-Assisted Discovery — Pure-Loss Converse Counterexample"
-excerpt: "With Yue Tu and six parallel AI agents, constructed a general counterexample family to a candidate converse arising from a 2014 quantum communication question; QIQCOP lists the problem as solved."
+excerpt: "With Yue Tu and six parallel AI agents, constructed general counterexamples to a candidate converse arising from a 2014 quantum communication question. Reviewed by Naixu Guo and included in QIQCOP Zoo, with the problem marked Solved."
 collection: portfolio
 permalink: /portfolio/2026-pure-loss-counterexample/
 date: 2026-09-23
 ---
 
-On **September 23, 2026**, working with **Yue Tu** and **six parallel AI agents**, I constructed a **general family of counterexamples** to the **candidate pure-loss second-order converse** in quantum communication. [QIQCOP](https://qiqc-op.com/problem/op_89fb664ba06ba5de/) credits the result to Yue Tu and Yifan Jing and marks the problem as **solved**.
+On **September 23, 2026**, working with **Yue Tu** and **six parallel AI agents**, I constructed a **general family of counterexamples** to the **candidate pure-loss second-order converse** in quantum communication.
+
+Following review by QIQCOP Zoo maintainer **[Naixu Guo](https://github.com/Naixu-Guo/quantum-open-problems/pull/99)**, our solution was **included in [QIQCOP Zoo](https://qiqc-op.com/problem/op_89fb664ba06ba5de/)** on **September 24, 2026**. The entry credits the result to **Yue Tu and Yifan Jing** and marks the problem as **Solved**.
 
 The candidate is a precise formulation arising from an open question raised by **Mark M. Wilde, Joseph M. Renes, and Saikat Guha in 2014**, **12 years** before this result.
 
