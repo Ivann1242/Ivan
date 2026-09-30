@@ -14,7 +14,7 @@ My research interests include **AI scientist systems**, **multimodal and LLM rea
 
 My Current Research
 ======
- * Princeton University, Z Lab (**Jul 2026 – Present**) — Research intern advised by Prof. Zhuang Liu. I work on multimodal reasoning, with a manuscript under review at ICLR 2027 (title withheld), and AI scientist systems that propose, evaluate, and iteratively improve scientific solutions.
+ * Princeton University, Z Lab (**Jul 2026 – Present**) — Research intern advised by Prof. [Zhuang Liu](https://liuzhuang13.github.io/). I work on multimodal reasoning, with a manuscript under review at ICLR 2027 (title withheld), and AI scientist systems that propose, evaluate, and iteratively improve scientific solutions.
  * RLHF research advised by Prof. [Lei Ying](https://leiying.engin.umich.edu/post-docs-students/)
  * Robotics simulation at the BIRDs Lab, already shipped [Contact Sensing Hexapod](https://arxiv.org/abs/2603.09147)
 
