@@ -38,7 +38,7 @@ Research Experience
   * Advisor: Prof. Shai Revzen
   * Developed large-scale MuJoCo simulations for multi-legged locomotion, evaluating modular controllers across varying morphologies and irregular terrain conditions.
   * Developing an efficient control pipeline that uses LLM-guided search to distill a high-capacity neural policy into an interpretable finite-state machine.
-  * Simulation contributor to [arXiv:2603.09147](https://arxiv.org/abs/2603.09147).
+  * Simulation contributor to [Contact Sensing Hexapod](https://iopscience.iop.org/article/10.1088/1748-3190/ae9261/pdf).
 
 * **Hybrid Transformer Analysis in Induction Head Problem** — University of Michigan (Sep 2025 – Dec 2025)
   * Mentor: Dr. Samet Oymak

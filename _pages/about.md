@@ -10,13 +10,13 @@ redirect_from:
 
 I am **Yifan Jing（敬益凡）** (also **Ivan Jing**), an undergraduate student in **Data Science** at the [University of Michigan, Ann Arbor](https://umich.edu/), expected to graduate in **2027**. I am also a research intern at **Princeton University's Z Lab**, supervised by **Prof. Zhuang Liu**. I previously studied as a **Visiting Student** at [Yale University](https://www.yale.edu/) (2024 Summer).
 
-My research interests include **AI scientist systems**, **multimodal and LLM reasoning**, and **AI evaluation**, with prior work in reinforcement learning and group theory. I am particularly interested in how AI agents can make scientific discoveries and iteratively improve their reasoning.
+My research interests include multimodal and LLM reasoning, Reinforcement Learning, and AI evaluation, with prior work in reinforcement learning and group theory. I am particularly interested in how AI agents can make scientific discoveries and iteratively improve their reasoning.
 
 My Current Research
 ======
  * Princeton University, Z Lab (**Jul 2026 – Present**) — Research intern advised by Prof. [Zhuang Liu](https://liuzhuang13.github.io/). I work on multimodal reasoning, with a manuscript under review at ICLR 2027 (title withheld), and AI scientist systems that propose, evaluate, and iteratively improve scientific solutions.
  * RLHF research advised by Prof. [Lei Ying](https://leiying.engin.umich.edu/post-docs-students/)
- * Robotics simulation at the [BIRDs Lab](https://www.birds.eecs.umich.edu/), already shipped [Contact Sensing Hexapod](https://arxiv.org/abs/2603.09147)
+ * Robotics simulation at the [BIRDs Lab](https://www.birds.eecs.umich.edu/), already shipped [Contact Sensing Hexapod](https://iopscience.iop.org/article/10.1088/1748-3190/ae9261/pdf)
 
 News
 ======
@@ -38,7 +38,6 @@ Selected Honors
 * **Tartanhacks 2026** — Top 5 grant among 300+ submitted projects
 * **CAST-USA 33rd Innovation Summit** — Finalist, CAST-USA 33rd Innovation Summit; award presented by Prof. Avi Wigderson, 2023 ACM A.M. Turing Award Laureate
 * **University of Pittsburgh NOUR 2025** — Summer Research Scholar, School of Computing and Information
-* **She Innovations Hackathon** — Led team to build a 3D runner game in Unity/C#
 
 Contact
 ======
