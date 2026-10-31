@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am **Yifan Jing（敬益凡）** (also **Ivan Jing**), an undergraduate student in **Data Science** at the [University of Michigan, Ann Arbor](https://umich.edu/), expected to graduate in **2027**. I am also a research intern at **Princeton University's Z Lab**, supervised by **Prof. Zhuang Liu**. I previously studied as a **Visiting Student** at [Yale University](https://www.yale.edu/) (2024 Summer).
+I am Yifan Jing（敬益凡） (also Ivan Jing), an undergraduate student in Data Science at the [University of Michigan, Ann Arbor](https://umich.edu/), expected to graduate in 2027. I am also a research intern at Princeton University's Z Lab, supervised by Prof. Zhuang Liu. I previously studied as a Visiting Student at [Yale University](https://www.yale.edu/) (2024 Summer).
 
 My research interests include multimodal and LLM reasoning, Reinforcement Learning, and AI evaluation, with prior work in reinforcement learning and group theory. I am particularly interested in how AI agents can make scientific discoveries and iteratively improve their reasoning.
 
