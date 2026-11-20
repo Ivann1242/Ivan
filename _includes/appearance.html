@@ -1,0 +1,28 @@
+<script>
+  (() => {
+    const root = document.documentElement;
+    const system = window.matchMedia('(prefers-color-scheme: dark)');
+    let choice;
+    let button;
+    try { choice = localStorage.getItem('theme'); } catch (_) {}
+    function applyTheme() {
+      const dark = choice === 'dark' || (choice !== 'light' && system.matches);
+      root.dataset.theme = dark ? 'dark' : 'light';
+      if (button) button.setAttribute('aria-pressed', String(dark));
+    }
+    root.classList.replace('no-js', 'js');
+    applyTheme();
+    system.addEventListener('change', applyTheme);
+    document.addEventListener('DOMContentLoaded', () => {
+      button = document.querySelector('.appearance-switch');
+      if (!button) return;
+      button.hidden = false;
+      applyTheme();
+      button.addEventListener('click', () => {
+        choice = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem('theme', choice); } catch (_) {}
+        applyTheme();
+      });
+    });
+  })();
+</script>

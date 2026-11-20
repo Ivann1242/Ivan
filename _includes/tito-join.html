@@ -1,0 +1,31 @@
+{% assign example = site.data.tito_join %}
+<figure class="project-figure" id="worked-join">
+  <fieldset class="join-panel">
+    <legend>Period-six inversion table</legend>
+    <input type="radio" name="join-state" id="join-union" checked><label for="join-union">Input union</label>
+    <input type="radio" name="join-state" id="join-closure"><label for="join-closure">Computed join</label>
+    <div class="join-display">
+      <img class="join-cycle" src="{{ '/images/research/tito-paper-cycle.png' | relative_url }}" width="783" height="360" alt="Figure detail from the paper. Input A contributes the edge from 2 to 3 of weight 1 and the edge from 4 to 2 with weights 4, 10, and so on. Input B contributes the edge from 3 to 4 with weights 1, 7, and so on.">
+      <table class="join-table" aria-label="Inversion increments by starting and ending residue" aria-describedby="join-caption">
+      <thead><tr><th scope="col"><abbr title="Starting residue / ending residue">a / r</abbr></th>{% for row in example.union %}<th scope="col">{{ forloop.index0 }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for row in example.union %}
+          {% assign start = forloop.index0 %}
+          <tr><th scope="row">{{ start }}</th>
+            {% for before in row %}
+              {% assign key = start | append: ',' | append: forloop.index0 %}
+              {% assign after = example.changes[key] %}
+              {% if after %}
+                <td class="changed"><span class="before-closure">{{ before }}</span><span class="after-closure">{{ after }}</span></td>
+              {% else %}
+                <td>{{ before }}</td>
+              {% endif %}
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+      </table>
+    </div>
+  </fieldset>
+  <figcaption id="join-caption">The cycle 2 → 3 → 4 → 2 has total weight six. Switching to the join changes the five shaded cells. A star represents the displayed increment plus 0, 6, 12, and so on. ∅ marks an empty cell. <a href="https://github.com/Ivann1242/TITO_Explore_package/blob/v0.1.2/paper/fpsac2027/fig/software-layout/pdf/computed-tables.pdf">Original paper figure</a> · <a href="https://github.com/Ivann1242/TITO_Explore_package/blob/v0.1.2/examples/fpsac2027_join.py">Run the example</a></figcaption>
+</figure>

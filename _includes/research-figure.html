@@ -1,0 +1,23 @@
+{% assign visual = include.visual %}
+<div class="research-figure"{% if visual.control %} data-study="{{ visual.image }}"{% if visual.image == 'tito-join' %} data-cycle="{{ site.data.tito_join.cycle | jsonify | escape }}"{% endif %}{% endif %}>
+  <div class="figure-artboard">
+    {% if include.url %}<a class="figure-link" href="{{ include.url | relative_url }}" tabindex="-1">{% endif %}
+      {% include research-image.html visual=visual detail=include.detail defer=include.defer featured=include.featured %}
+      {% if visual.control %}<canvas width="720" height="432" aria-hidden="true" hidden></canvas>{% endif %}
+    {% if include.url %}</a>{% endif %}
+  </div>
+  {% if visual.control %}
+    <div class="figure-controls" hidden>
+      {% if visual.image == 'pure-loss' %}
+        <label class="figure-parameter">Transmissivity <i>η</i>
+          <input type="range" min="0.10" max="0.90" step="0.05" value="0.50" aria-label="Transmissivity">
+          <span class="parameter-value" aria-hidden="true">0.50</span>
+        </label>
+      {% else %}
+        <button type="button" class="figure-action"><span class="action-icon" aria-hidden="true"></span><span class="action-label">{{ visual.control }}</span></button>
+        <span class="figure-result" aria-hidden="true">{{ visual.result }}</span>
+      {% endif %}
+      <span class="visually-hidden figure-status" role="status"></span>
+    </div>
+  {% endif %}
+</div>

@@ -1,6 +1,17 @@
 ---
 title: "AI-Assisted Discovery — Pure-Loss Converse Counterexample"
-excerpt: "With Yue Tu and six parallel AI agents, constructed general counterexamples to a candidate converse arising from a 2014 quantum communication question. Reviewed by Naixu Guo and included in QIQCOP Zoo, with the problem marked Solved."
+short_title: "A counterexample in quantum communication"
+topic: Quantum information
+featured: true
+visual:
+  image: pure-loss
+  height: 648
+  control: "Transmissivity"
+  alt: "Seventeen blue curves show how far the fixed-photon code exceeds the proposed second-order bound. Each curve reaches zero at error probability 0.5. At 50% transmissivity and 10% error, the coefficient gap is +0.74."
+  caption: "Each curve fixes a transmissivity and shows the gap between the two √n coefficients at one photon per mode. At 10% error and 50% transmissivity, the fixed-photon code’s coefficient exceeds the proposed bound’s by 0.74."
+  source: https://qiqc-op.com/problem/op_89fb664ba06ba5de/
+  source_label: "Equations (4) and (5)"
+excerpt: "Yue Tu and I worked with six AI agents to disprove a [candidate pure-loss converse](https://qiqc-op.com/problem/op_89fb664ba06ba5de/) arising from a 2014 question. We verified the counterexamples in Lean 4."
 collection: portfolio
 permalink: /portfolio/2026-pure-loss-counterexample/
 date: 2026-09-23

@@ -1,0 +1,25 @@
+<div class="work-list{% if include.gallery %} research-gallery{% endif %}{% if include.featured %} research-gallery--featured{% endif %}">
+  {% for entry in include.entries %}
+    <article class="work-row{% if entry.visual %} work-row--illustrated{% endif %}">
+      {% if entry.visual %}
+        {% assign defer_image = true %}{% assign lead_figure = false %}
+        {% if forloop.first %}{% assign defer_image = false %}{% assign lead_figure = include.featured %}{% endif %}
+        {% include research-figure.html visual=entry.visual url=entry.url defer=defer_image featured=lead_figure %}
+      {% endif %}
+      <div class="work-info">
+        <div class="work-meta">
+          <span>{{ entry.topic | default: entry.venue }}</span>
+          {% if entry.period %}<span>{{ entry.period }}</span>{% else %}<time datetime="{{ entry.date | date: '%Y-%m-%d' }}">{{ entry.date | date: '%Y' }}</time>{% endif %}
+        </div>
+        <div class="work-body">
+          <h{{ include.level | default: 2 }} class="work-title"><a href="{{ entry.url | relative_url }}">{{ entry.short_title | default: entry.title | escape }} <span class="work-arrow" aria-hidden="true">→</span></a></h{{ include.level | default: 2 }}>
+          {% if entry.authors %}<p class="byline">{{ entry.authors | join: ', ' }}</p>{% endif %}
+          {% if entry.type %}<p class="byline">{{ entry.type }}</p>{% endif %}
+          {% if entry.review_status %}<p class="byline">{{ entry.review_status }}</p>{% endif %}
+          {% if entry.excerpt %}<div class="work-summary">{{ entry.excerpt | markdownify }}</div>{% endif %}
+          {% if entry.paperurl %}<a class="text-link" href="{{ entry.paperurl }}">Read paper <span aria-hidden="true">↗</span></a>{% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>

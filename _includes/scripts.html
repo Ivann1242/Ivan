@@ -1,4 +1,9 @@
-<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+{% if page.layout != 'profile' or content contains 'language-plotly' %}
+  <script type="module" src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+{% endif %}
+{% if content contains 'data-study="' %}
+  <script type="module" src="{{ '/assets/js/research-controls.js' | relative_url }}"></script>
+{% endif %}
 
 {% include analytics.html %}
 

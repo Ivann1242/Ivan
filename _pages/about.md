@@ -1,44 +1,59 @@
 ---
+layout: profile
 permalink: /
 title: "Yifan Jing（敬益凡）"
-description: "Personal homepage of Yifan Jing (敬益凡, Ivan Jing), Data Science undergraduate at the University of Michigan and research intern at Princeton Z Lab working on AI scientist systems and multimodal reasoning."
-author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
+<section class="intro" aria-labelledby="profile-name">
+  <div class="intro-name">
+    <h1 id="profile-name">Yifan <em>Jing</em></h1>
+    <p class="name-alias"><span lang="zh-Hans">敬益凡</span><span class="alias-divider" aria-hidden="true">/</span>Ivan Jing</p>
+  </div>
+  <div class="intro-copy">
+    <p class="intro-lead">{{ site.author.bio }}</p>
+    <p>I’m a data science undergraduate at the <a href="https://umich.edu/">University of Michigan</a> and a research intern with <a href="https://liuzhuang13.github.io/">Zhuang Liu</a> at Princeton’s Z Lab.</p>
+    <nav id="contact" class="contact-links" aria-label="Contact and profiles">
+      <a href="mailto:{{ site.author.email }}">Email</a>
+      {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+      {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}
+      <a href="{{ '/files/Yifan_Jing_Research_Resume.pdf' | relative_url }}">CV <span class="file-type">(PDF)</span></a>
+    </nav>
+  </div>
+  <figure class="portrait">
+    <picture>
+      <source srcset="{{ '/images/profile.webp' | relative_url }}" type="image/webp">
+      <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Yifan Jing in front of a research poster" width="478" height="738" fetchpriority="high">
+    </picture>
+    <figcaption>Based in {{ site.author.location }}</figcaption>
+  </figure>
+</section>
 
-I am Yifan Jing（敬益凡） (also Ivan Jing), an undergraduate student in Data Science at the [University of Michigan, Ann Arbor](https://umich.edu/), expected to graduate in 2027. I am also a research intern at Princeton University's Z Lab, supervised by Prof. Zhuang Liu. I previously studied as a Visiting Student at [Yale University](https://www.yale.edu/) (2024 Summer).
+<section class="home-section" id="research-highlights" aria-labelledby="news">
+  <header class="section-heading">
+    <h2 id="news">Selected research</h2>
+    <a class="text-link" href="{{ '/portfolio/' | relative_url }}">All projects <span aria-hidden="true">→</span></a>
+  </header>
+  {% assign featured = site.portfolio | where: 'featured', true | sort: 'date' | reverse %}
+  {% include work-list.html entries=featured level=3 gallery=true featured=true %}
+</section>
 
-My research interests include multimodal and LLM reasoning, Reinforcement Learning, and AI evaluation, with prior work in reinforcement learning and group theory. I am particularly interested in how AI agents can make scientific discoveries and iteratively improve their reasoning.
-
-My Current Research
-======
- * Princeton University, Z Lab (**Jul 2026 – Present**) — Research intern advised by Prof. [Zhuang Liu](https://liuzhuang13.github.io/). I work on multimodal reasoning, with a manuscript under review at ICLR 2027 (title withheld), and AI scientist systems that propose, evaluate, and iteratively improve scientific solutions.
- * RLHF research advised by Prof. [Lei Ying](https://leiying.engin.umich.edu/post-docs-students/)
- * Robotics simulation at the [BIRDs Lab](https://www.birds.eecs.umich.edu/), already shipped [Contact Sensing Hexapod](https://iopscience.iop.org/article/10.1088/1748-3190/ae9261/pdf)
-
-News
-======
-* **Sep 23, 2026** — Resolved a previously unsolved formulation of a 12-year-old open problem in quantum communication. Working with Yue Tu and six parallel AI agents, I constructed a general family of counterexamples to the [candidate pure-loss second-order converse](https://qiqc-op.com/problem/op_89fb664ba06ba5de/), a precise formulation arising from the question raised by Mark M. Wilde, Joseph M. Renes, and Saikat Guha in 2014. The disproof is verified in Lean 4. Following review by QIQCOP Zoo maintainer [Naixu Guo](https://github.com/Naixu-Guo/quantum-open-problems/pull/99), our solution was included in [QIQCOP Zoo](https://qiqc-op.com/problem/op_89fb664ba06ba5de/), where the problem is now marked Solved. [Project details]({{ site.baseurl }}/portfolio/2026-pure-loss-counterexample/)
-* **Sep 22, 2026** — My [Cambrian projection task for Terminal-Bench Science](https://github.com/harbor-framework/terminal-bench-science/pull/1257) passed all three review rounds: domain, technical, and final review. 1 task accepted for inclusion. [Project details]({{ site.baseurl }}/portfolio/2026-terminal-bench-science/)
-* **2026** — Top 5 grant at [Tartanhacks](https://github.com/danielryang/spaceoverflow) (300+ projects, 700+ participants, one of the largest student hackathon in US).
-* **2025** — Finalist, CAST-USA 33rd Innovation Summit; award presented by Prof. Avi Wigderson, 2023 ACM A.M. Turing Award Laureate.
-
-Research Highlights
-======
-* AI-assisted quantum research — With Yue Tu, constructed a general counterexample family disproving the candidate pure-loss second-order converse, using six parallel agents. [Portfolio]({{ site.baseurl }}/portfolio/2026-pure-loss-counterexample/) · [Solved problem](https://qiqc-op.com/problem/op_89fb664ba06ba5de/)
-* Terminal-Bench Science — Built a Lean 4 / Mathlib benchmark task for Cambrian projection, with a complete reference proof and an isolated proof verifier; all reviewer rounds approved. [Portfolio]({{ site.baseurl }}/portfolio/2026-terminal-bench-science/) · [PR #1257](https://github.com/harbor-framework/terminal-bench-science/pull/1257)
-* Hybrid Transformer Analysis — Studied generalization on the Associative Recall task across Transformer, Mamba, and hybrid architectures. [GitHub](https://github.com/Ivann1242/Analysis-AR-problem)
-* TITO (completed) — Developed algorithms for Translation-Invariant Total Orders with Dr. Grant Barkley and released a SageMath package and paper. [Project page](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html) · [SageMath package](https://github.com/emmaycl/TITO_Explore_package) · [arXiv:2607.11709](https://arxiv.org/abs/2607.11709)
-
-Selected Honors
-======
-* **University of Michigan SURE 2026** — Summer Undergraduate Research Experience fellowship
-* **Tartanhacks 2026** — Top 5 grant among 300+ submitted projects
-* **CAST-USA 33rd Innovation Summit** — Finalist, CAST-USA 33rd Innovation Summit; award presented by Prof. Avi Wigderson, 2023 ACM A.M. Turing Award Laureate
-* **University of Pittsburgh NOUR 2025** — Summer Research Scholar, School of Computing and Information
-
-Contact
-======
-Feel free to reach out at [ivaning@umich.edu](mailto:ivaning@umich.edu). You can also download my [research resume]({{ site.baseurl }}/files/Yifan_Jing_Research_Resume.pdf).
+<div class="home-notes">
+  <section id="my-current-research" aria-labelledby="collaborations-title">
+    <h2 id="collaborations-title">Research experience</h2>
+    <p>At Princeton, I test when generated images help a vision-language model reason. At Michigan, I developed HintFlow with <a href="https://leiying.engin.umich.edu/post-docs-students/">Lei Ying</a> to train a small model to give useful hints to a larger one.</p>
+    <p><a href="https://lsa.umich.edu/math/people/postdoc-faculty/gbarkley.html">Grant Barkley</a>, a postdoctoral assistant professor at Michigan, advised our work on translation-invariant total orders (TITOs). We built a SageMath package, and our <a href="https://arxiv.org/abs/2607.11709">paper</a> is under review at FPSAC 2027.</p>
+    <p>In Shai Revzen’s <a href="https://www.birds.eecs.umich.edu/">BIRDs Lab</a>, I ran long MuJoCo simulations for <a href="https://iopscience.iop.org/article/10.1088/1748-3190/ae9261/pdf"><i>Contact Sensing Hexapod</i></a>.</p>
+    <a class="text-link" href="{{ '/files/Yifan_Jing_Research_Resume.pdf' | relative_url }}">Full CV (PDF) <span aria-hidden="true">→</span></a>
+  </section>
+  <section id="selected-honors" aria-labelledby="honors-title">
+    <h2 id="honors-title">Selected honors</h2>
+    <dl class="honors">
+      <div><dt>2026</dt><dd>SURE Fellowship, University of Michigan</dd></div>
+      <div><dt>2026</dt><dd>Top 5 grant, <a href="https://github.com/danielryang/spaceoverflow">TartanHacks</a>, among 300+ projects</dd></div>
+      <div><dt>2025</dt><dd>Finalist, CAST-USA 33rd Innovation Summit. Award presented by Avi Wigderson.</dd></div>
+      <div><dt>2025</dt><dd>NOUR Summer Research Scholar, University of Pittsburgh</dd></div>
+    </dl>
+  </section>
+</div>

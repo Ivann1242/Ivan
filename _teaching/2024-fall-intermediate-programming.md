@@ -2,6 +2,7 @@
 title: "Intermediate Programming"
 collection: teaching
 type: "Undergraduate Teaching Assistant"
+excerpt: "I taught Java in recitations and office hours for a class of more than 125 students, and helped design and grade exams."
 permalink: /teaching/2024-fall-intermediate-programming
 venue: "University of Pittsburgh"
 date: 2024-08-01

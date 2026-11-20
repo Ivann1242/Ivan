@@ -1,14 +1,17 @@
 # The following is the order of the links in the header of the website.
 
 main:
+  - title: "Projects"
+    url: /portfolio/
+    collection: portfolio
+
   - title: "Publications"
     url: /publications/
-
-  - title: "Portfolio"
-    url: /portfolio/
+    collection: publications
 
   - title: "Teaching"
     url: /teaching/
+    collection: teaching
 
   - title: "CV"
-    url: /cv/
+    url: /files/Yifan_Jing_Research_Resume.pdf

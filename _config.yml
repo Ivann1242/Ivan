@@ -12,8 +12,8 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Yifan Jing（敬益凡）"
 title_separator          : "-"
 name                     : &name "Yifan Jing（敬益凡）"
-description              : &description "Yifan Jing (敬益凡, Ivan Jing) — Data Science undergraduate at the University of Michigan and research intern at Princeton Z Lab. Research interests: AI scientist systems, multimodal and LLM reasoning, and AI evaluation."
-keywords                 : "Yifan Jing, Ivan Jing, 敬益凡, University of Michigan, Princeton, Data Science, AI scientist, multimodal reasoning, LLM reasoning, AI evaluation"
+description              : &description "Yifan Jing (敬益凡, Ivan Jing) is a data science undergraduate at the University of Michigan and a research intern at Princeton’s Z Lab. His goal is to build open AI systems for scientific discovery."
+keywords                 : "Yifan Jing, Ivan Jing, 敬益凡, University of Michigan, Princeton, Data Science, model collaboration, multimodal reasoning, scientific discovery, AI evaluation"
 url                      : https://ivann1242.github.io
 baseurl                  : "/Ivan"
 repository               : "Ivann1242/Ivan"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Yifan Jing（敬益凡）"
   pronouns         : # example: "she/her"  
-  bio              : "Data Science @ University of Michigan. Research intern @ Princeton Z Lab.<br>multimodal and LLM reasoning | Reinforcement Learning | AI evaluation."
+  bio              : "I want to build open AI systems that work alongside scientists to ask new questions and make discoveries others can verify."
   location         : "Ann Arbor, Michigan"
   employer         : "University of Michigan"
   uri              : # URL
@@ -267,28 +267,19 @@ defaults:
       path: ""
       type: teaching
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      layout: profile
   # _publications
   - scope:
       path: ""
       type: publications
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      layout: profile
   # _portfolio
   - scope:
       path: ""
       type: portfolio
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
+      layout: profile
   # _talks
   - scope:
       path: ""

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<main id="main" class="site-width profile-main" tabindex="-1">
+  {% if page.url == '/' %}
+    {{ content }}
+  {% else %}
+    <article class="document">
+      <header class="document-heading">
+        {% if page.collection %}
+          {% assign section = site.data.navigation.main | where: 'collection', page.collection | first %}
+          {% if section %}<a class="text-link back-link" href="{{ section.url | relative_url }}"><span aria-hidden="true">←</span> {{ section.title }}</a>{% endif %}
+        {% endif %}
+        <h1>{{ page.title | escape }}</h1>
+        {% if page.date %}
+          <p class="entry-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.venue %} · {{ page.venue }}{% endif %}{% if page.type %} · {{ page.type }}{% endif %}</p>
+        {% endif %}
+        {% if page.authors %}<p class="entry-meta">{{ page.authors | join: ', ' }}</p>{% endif %}
+        {% if page.review_status %}<p class="entry-meta">{{ page.review_status }}</p>{% endif %}
+      </header>
+      {% if page.visual %}
+        <figure class="project-figure">
+          {% include research-figure.html visual=page.visual detail=true %}
+          <figcaption>{{ page.visual.caption | escape }} <a href="{{ page.visual.source }}">{{ page.visual.source_label }}</a></figcaption>
+        </figure>
+        {% if page.visual.image == 'tito-join' %}{% include tito-join.html %}{% endif %}
+      {% endif %}
+      <div class="{% if page.collection or page.prose %}prose{% else %}index-content{% endif %}">{{ content }}</div>
+      {% if page.citation %}<details class="citation"><summary>Recommended citation</summary><p>{{ page.citation }}</p></details>{% endif %}
+      {% assign paper = page.paperurl %}
+      {% if paper and content contains paper %}{% assign paper = nil %}{% endif %}
+      {% if page.slidesurl or page.bibtexurl or paper or page.link %}
+        <nav class="resource-links" aria-label="Resources">
+          {% if paper %}<a class="text-link" href="{{ paper }}">Paper</a>{% endif %}
+          {% if page.slidesurl %}<a class="text-link" href="{{ page.slidesurl }}">Slides</a>{% endif %}
+          {% if page.bibtexurl %}<a class="text-link" href="{{ page.bibtexurl }}">BibTeX</a>{% endif %}
+          {% if page.link %}<a class="text-link" href="{{ page.link }}">Project website</a>{% endif %}
+        </nav>
+      {% endif %}
+    </article>
+  {% endif %}
+</main>

@@ -1,36 +1,18 @@
 ---
-layout: archive
-title: "Publications"
+layout: profile
+title: Publications
 permalink: /publications/
-author_profile: true
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
+{% if site.author.googlescholar %}<p><a class="text-link" href="{{ site.author.googlescholar }}">Google Scholar <span aria-hidden="true">↗</span></a></p>{% endif %}
+{% assign papers = site.publications | sort: 'date' | reverse %}
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+  {% for category in site.publication_category %}
+    {% assign group = papers | where: 'category', category[0] %}
+    {% if group.size > 0 %}
+      <h2 class="group-title">{{ category[1].title }}</h2>
+      {% include work-list.html entries=group level=3 %}
+    {% endif %}
   {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+  {% include work-list.html entries=papers %}
 {% endif %}
-
-
-

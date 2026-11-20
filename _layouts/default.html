@@ -11,20 +11,15 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
-
+  <body class="site-body{% unless page.layout == 'profile' %} legacy-page{% endunless %}">
+    <a class="skip-link" href="#main">Skip to content</a>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
+    {% include footer.html %}
+    {% include footer/custom.html %}
     {% include scripts.html %}
 
   </body>

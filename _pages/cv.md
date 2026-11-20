@@ -1,100 +1,73 @@
 ---
-layout: archive
-title: "CV"
+layout: profile
+title: "Curriculum vitae"
 permalink: /cv/
-author_profile: true
+redirect_to: /files/Yifan_Jing_Research_Resume.pdf
+prose: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Download CV (PDF)]({{ '/files/Yifan_Jing_Research_Resume.pdf' | relative_url }}){: .text-link }
+
+{{ site.author.bio }}
 
 Education
-======
-* **B.S. in Data Science**, University of Michigan, Ann Arbor — Expected 2027
-  * Research Interests: Multimodal Reasoning, LLM Reasoning, AI Scientist Systems, AI Evaluation
-* **Visiting Student**, Yale University — 2024 summer
-  * Algorithm
+---------
+
+* **University of Michigan, Ann Arbor** — B.S. in Data Science, expected 2027.
+* **Yale University** — Visiting student in algorithms, summer 2024.
 
 Research Experience
-======
-* **Research Intern** — Z Lab, Princeton University (Jul 2026 – Present)
-  * Advisor: Prof. Zhuang Liu
-  * Investigating multimodal reasoning through systematic evaluations and controlled ablations; a manuscript is under review at **ICLR 2027** (title withheld).
-  * Developing **AI scientist systems** and self-evolving agents that autonomously propose, evaluate, and iteratively improve reasoning strategies and scientific solutions.
+-------------------
 
-* **Contributor** — Terminal-Bench Science (Apr 2026 – Present)
-  * Developing mathematical discovery and formal reasoning tasks for evaluating frontier AI agents.
-  * **1 task accepted for inclusion**: Cambrian projection in Lean 4, with domain, technical, and final review approved as of **September 22, 2026**.
-  * Built a complete reference proof and isolated verifier for Reading's maximality theorem on arbitrary Coxeter systems.
-  * [Task and review history — PR #1257](https://github.com/harbor-framework/terminal-bench-science/pull/1257) · [Project]({{ base_path }}/portfolio/2026-terminal-bench-science/)
+* **Princeton University, Z Lab** — Research intern with [Zhuang Liu](https://liuzhuang13.github.io/) (Jul 2026 – present).
+  * Compare vision-language models’ answers with and without generated images to identify when image generation helps visual reasoning.
 
-* **Undergraduate Researcher, SURE 2026** — University of Michigan (May 2026 – Aug 2026)
-  * Advisor: Prof. Lei Ying
-  * Developed **HintFlow**, training a 4B language-model policy to guide frozen 14B–20B reasoning models through selective supervised fine-tuning and a modified GRPO objective.
-  * Built the end-to-end training and inference pipeline using Qwen3, GPT-OSS-20B, LoRA, and vLLM.
+* **University of Michigan, SURE** — Undergraduate researcher with [Lei Ying](https://leiying.engin.umich.edu/post-docs-students/) (May – Aug 2026).
+  * Developed HintFlow, training a 4B model to guide frozen 14B–20B reasoning models with short hints. Evaluated the collaboration on math, ARC, and coding tasks.
 
-* **Contact Sensing Hexapod** — BIRDs Lab, University of Michigan (Jan 2026 – Present)
-  * Advisor: Prof. Shai Revzen
-  * Developed large-scale MuJoCo simulations for multi-legged locomotion, evaluating modular controllers across varying morphologies and irregular terrain conditions.
-  * Developing an efficient control pipeline that uses LLM-guided search to distill a high-capacity neural policy into an interpretable finite-state machine.
-  * Simulation contributor to [Contact Sensing Hexapod](https://iopscience.iop.org/article/10.1088/1748-3190/ae9261/pdf).
+* **University of Michigan, Mathematics (LoGM)** — Translation-invariant total orders (TITOs), advised by [Grant Barkley](https://lsa.umich.edu/math/people/postdoc-faculty/gbarkley.html), Postdoctoral Assistant Professor of Mathematics (Sep 2025 – Apr 2026).
+  * Developed algorithms to compare TITOs through their inversion sets and compute joins using weighted paths. Released them with my coauthors in [TITO_Explore](https://github.com/emmaycl/TITO_Explore_package).
 
-* **Hybrid Transformer Analysis in Induction Head Problem** — University of Michigan (Sep 2025 – Dec 2025)
-  * Mentor: Dr. Samet Oymak
-  * Studied generalization of sequence models on the Associative Recall task; proposed hybrid SSM + attention architectures.
-  * [GitHub](https://github.com/Ivann1242/Analysis-AR-problem)
+* **Terminal-Bench Science** — Benchmark contributor (Apr 2026 – present).
+  * Built two tasks from combinatorics research. [Cambrian projection in Lean 4](https://github.com/harbor-framework/terminal-bench-science/pull/1257) was merged into the main benchmark. Reviewers designated [TITO weak-order comparison](https://github.com/harbor-framework/terminal-bench-science/pull/268) for Lite.
 
-* **TITO (Translation-Invariant Total Orders)** — University of Michigan (Sep 2025 – Apr 2026)
-  * Advisor: Dr. Grant Barkley
-  * Completed the project, formalizing order-comparability through inversion sets and implementing weak order comparison, joins, normalization, and visualization in SageMath.
-  * Released a [SageMath package](https://github.com/emmaycl/TITO_Explore_package) and [arXiv preprint](https://arxiv.org/abs/2607.11709); targeting FPSAC 2027.
-  * [LoGM project page](https://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/LoGM/projects.html)
+* **University of Michigan, BIRDs Lab** — Undergraduate researcher with Shai Revzen (Jan 2026 – present).
+  * Ran long MuJoCo simulations for [Contact Sensing Hexapod](https://iopscience.iop.org/article/10.1088/1748-3190/ae9261/pdf). I now study how neural networks and finite-state controllers can guide six-legged robots over rough terrain.
 
-* **ThinkAct LLM Agent** — University of Michigan (Sep 2025 – Dec 2025)
-  * Mentor: Dr. Samet Oymak
-  * Improved LLM reasoning via self-reflection and self-consistency within ReAct.
-  * [GitHub](https://github.com/Ivann1242/ThinkAct)
-
-Selected Research Result
-======
-* **General counterexamples to a candidate pure-loss second-order converse** (September 23, 2026)
-  * With **Yue Tu** and **six parallel AI agents**, constructed a general family of counterexamples in quantum communication and verified the disproof in **Lean 4**.
-  * The candidate formulation arose from a question posed by **Mark M. Wilde, Joseph M. Renes, and Saikat Guha in 2014**, 12 years before this result. QIQCOP credits the result to Yue Tu and Yifan Jing and lists the problem as solved.
-  * [Problem and solution](https://qiqc-op.com/problem/op_89fb664ba06ba5de/) · [Project]({{ base_path }}/portfolio/2026-pure-loss-counterexample/)
-
-Teaching Experience
-======
-<ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-{% endfor %}</ul>
-
-Skills
-======
-* **Languages:** Python (JAX, PyTorch, NumPy), C, C++, Java, HTML, JavaScript, MIPS
-* **Engineering:** MuJoCo, Linux
-* **Tools:** GitHub Actions, Jupyter Notebook, Colab, Google Cloud Platform, LaTeX, Coding Agents
+* **University of Michigan, hybrid sequence models** — Research project with Samet Oymak (Sep – Dec 2025).
+  * Compared Transformer, Mamba, and hybrid architectures on [associative recall](https://github.com/Ivann1242/Analysis-AR-problem) to study long-range generalization.
 
 Publications
-======
-**Manuscript under review at ICLR 2027** (title withheld).
+------------
 
-<ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-{% endfor %}</ul>
+* Joint first author on a study of image generation for visual reasoning. Under review at ICLR 2027.
+{% for paper in site.publications reversed %}* {{ paper.authors | join: ', ' }}. [*{{ paper.title }}*]({{ paper.paperurl | default: paper.url | relative_url }}). {{ paper.venue }}, {{ paper.date | date: '%Y' }}.{% if paper.review_status %} {{ paper.review_status }}.{% endif %}
+{% endfor %}
 
-Portfolio
-======
-<ul>{% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}{% for post in sorted_portfolio %}
-    {% include archive-single-cv.html %}
-{% endfor %}</ul>
+Selected Research Result
+------------------------
+
+* With Yue Tu and six AI agents, constructed a family of counterexamples to a [candidate second-order converse for the pure-loss quantum channel](https://qiqc-op.com/problem/op_89fb664ba06ba5de/) and [verified the disproof in Lean 4](https://github.com/Ivann1242/pure-loss-second-order-lean) (Sep 2026).
+
+Teaching Experience
+-------------------
+
+{% for course in site.teaching reversed %}* **[{{ course.title }}]({{ course.url | relative_url }})** — {{ course.type }}, {{ course.venue }}, {{ course.date | date: '%Y' }}. {{ course.excerpt }}
+{% endfor %}
 
 Honors & Leadership
-======
-* **University of Michigan SURE 2026** — Summer Undergraduate Research Experience fellowship
-* **University of Pittsburgh NOUR 2025** — Summer Research Scholar, School of Computing and Information
-* **Tartanhacks 2026** — Led team of 4; Top 5 grant among 300+ projects. [GitHub](https://github.com/danielryang/spaceoverflow)
-* **CAST-USA 33rd Innovation Summit** — Finalist, $1,500 award
-* **She Innovations Hackathon** — Led team of 3 to build a 3D runner game in Unity/C#
+-------------------
 
-[Download full CV (PDF)]({{ base_path }}/files/Yifan_Jing_Research_Resume.pdf)
+* **SURE Fellowship**, University of Michigan, 2026.
+* **TartanHacks**, 2026. Led a team of four to a top-five grant among 300+ projects with [SpaceOverflow](https://github.com/danielryang/spaceoverflow).
+* **NOUR Summer Research Scholar**, University of Pittsburgh, 2025.
+* **CAST-USA 33rd Innovation Summit**, 2025. Finalist, $1,500 award presented by Avi Wigderson.
+* **She Innovations Hackathon**. Led a team of three building a 3D runner in Unity and C#.
+
+Skills
+------
+
+* Python (PyTorch, JAX, NumPy), C, C++, Java, JavaScript, HTML, MIPS.
+* SageMath, Lean 4, MuJoCo, Linux, GitHub Actions, Jupyter, Colab, Google Cloud Platform, LaTeX.
