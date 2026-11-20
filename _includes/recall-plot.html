@@ -1,0 +1,9 @@
+{% assign plot = include.plot %}
+{% assign path = '/images/research/' | append: plot.stem | relative_url %}
+<figure class="project-figure recall-plot" id="{{ plot.id }}">
+  <picture>
+    <source media="(max-width: 34rem)" srcset="{{ path }}-compact.webp" width="410" height="{{ plot.compact_height }}">
+    <img src="{{ path }}.webp" width="730" height="{{ plot.height }}" alt="{{ plot.alt | escape }}" loading="lazy" decoding="async">
+  </picture>
+  <figcaption>{{ plot.caption | escape }}</figcaption>
+</figure>

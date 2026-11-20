@@ -1,0 +1,12 @@
+{% assign study = site.data.recall_study %}
+<table class="recall-table">
+  <caption>Mamba accuracy with 16 possible keys</caption>
+  <thead><tr><th scope="col">Width · Offset</th><th scope="col">32 tokens</th><th scope="col">64 tokens</th><th scope="col">96 tokens</th></tr></thead>
+  <tbody>
+    {% for run in study.runs %}
+      {% if run.model == 'mamba' and run.eligible_keys == 16 %}
+        <tr><th scope="row">{{ run.width }} · {{ run.offset }}</th>{% for test in run.tests %}<td>{{ test.correct.unmasked | times: 100.0 | divided_by: study.examples_per_condition | round: 1 }}%</td>{% endfor %}</tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>

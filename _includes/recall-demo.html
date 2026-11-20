@@ -1,0 +1,43 @@
+{% assign example = site.data.recall_study.worked_example %}
+{% assign first_query = example.queries.A %}
+{% assign first_read = first_query.conditions.unmasked %}
+{% assign sequence = example.prefix | join: ',' | append: ',A' | split: ',' %}
+<figure class="project-figure recall-demo" id="attention-example" aria-labelledby="recall-example-caption">
+  <div class="recall-experiment">
+    <div class="recall-controls" hidden>
+      <fieldset>
+        <legend>Final query</legend>
+        <div class="recall-options">
+          {% for query in example.queries %}
+            <label for="recall-query-{{ query[0] }}"><input id="recall-query-{{ query[0] }}" type="radio" name="recall-query" value="{{ query[0] }}"{% if forloop.first %} checked{% endif %}> {{ query[0] }}</label>
+          {% endfor %}
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Block from final attention</legend>
+        <div class="recall-options">
+          <label for="recall-none"><input id="recall-none" type="radio" name="recall-block" value="unmasked" checked> None</label>
+          <label for="recall-key"><input id="recall-key" type="radio" name="recall-block" value="key"> Earlier key</label>
+          <label for="recall-value"><input id="recall-value" type="radio" name="recall-block" value="value"> Value</label>
+        </div>
+      </fieldset>
+    </div>
+    <ol class="recall-tape" role="list" aria-label="Final attention weight at each input token">
+      {% for symbol in sequence %}
+        {% assign index = forloop.index0 %}
+        {% assign percent = first_read.weights[index] | times: 100.0 %}
+        {% capture role %}{% if index == first_query.key_pos %}key{% elsif index == first_query.value_pos %}value{% elsif forloop.last %}query{% endif %}{% endcapture %}
+        <li data-role="{{ role }}">
+          <span class="recall-share">{% if percent > 0 and percent < 0.1 %}&lt;0.1{% elsif percent > 99.9 and percent < 100 %}&gt;99.9{% else %}{{ percent | round: 1 }}{% endif %}%</span>
+          <span class="recall-track" aria-hidden="true"><span class="recall-bar" style="height: {{ percent }}%"></span></span>
+          <b class="recall-symbol">{{ symbol }}</b>
+          <span class="recall-role">{{ role }}</span>
+        </li>
+      {% endfor %}
+    </ol>
+    <output class="recall-verdict" aria-live="polite" aria-atomic="true">The model predicts <strong>{{ first_read.prediction }}</strong>. The target is <strong>{{ first_query.target }}</strong>.</output>
+  </div>
+  <figcaption id="recall-example-caption">Each bar shows the share of the final token’s attention assigned to one position. The six-token example uses the saved 16-key hybrid. Blocking a position removes it only from the final attention read.</figcaption>
+  <script type="application/json" class="recall-example-data">{{ example | jsonify }}</script>
+</figure>
+<script type="module" src="{{ '/assets/js/recall-example.js' | relative_url }}"></script>
