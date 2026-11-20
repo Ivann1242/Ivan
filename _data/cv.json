@@ -185,11 +185,11 @@
   ],
   "portfolio": [
     {
-      "name": "AI-Assisted Discovery — Pure-Loss Converse Counterexample",
+      "name": "Disproving a second-order converse conjecture for pure-loss channels",
       "category": "portfolio",
       "date": "2026-09-23",
       "url": "https://ivann1242.github.io/Ivan/portfolio/2026-pure-loss-counterexample/",
-      "description": "With Yue Tu and six AI agents, constructed counterexamples to a candidate converse for the pure-loss quantum channel and verified the disproof in Lean 4."
+      "description": "With Yue Tu, disproved the proposed bound using fixed-photon codes and verified the disproof in Lean 4."
     },
     {
       "name": "Terminal Bench Science",

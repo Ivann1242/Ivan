@@ -49,7 +49,7 @@ Publications
 Selected Research Result
 ------------------------
 
-* With Yue Tu and six AI agents, constructed a family of counterexamples to a [candidate second-order converse for the pure-loss quantum channel](https://qiqc-op.com/problem/op_89fb664ba06ba5de/) and [verified the disproof in Lean 4](https://github.com/Ivann1242/pure-loss-second-order-lean) (Sep 2026).
+* Disproved a [second-order converse conjecture for pure-loss channels](https://qiqc-op.com/problem/op_89fb664ba06ba5de/) with Yue Tu and [verified the disproof in Lean 4](https://github.com/Ivann1242/pure-loss-second-order-lean) (Sep 2026).
 
 Teaching Experience
 -------------------

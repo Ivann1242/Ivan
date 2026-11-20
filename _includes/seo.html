@@ -43,8 +43,9 @@
   {% assign seo_author_twitter = seo_author_twitter | replace: "@", "" %}
 {% endif %}
 
-{% if page.date %}
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% assign published_date = page.article_date | default: page.date %}
+{% if published_date %}
+  <meta property="article:published_time" content="{{ published_date | date_to_xmlschema }}">
 {% endif %}
 
 {% if seo_url %}
