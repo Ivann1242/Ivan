@@ -16,6 +16,7 @@ redirect_from:
     <p>I’m a data science undergraduate at the <a href="https://umich.edu/">University of Michigan</a> and a research intern with <a href="https://liuzhuang13.github.io/">Zhuang Liu</a> at Princeton’s Z Lab.</p>
     <nav id="contact" class="contact-links" aria-label="Contact and profiles">
       <a href="mailto:{{ site.author.email }}">Email</a>
+      {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>{% endif %}
       {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
       {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}
       <a href="{{ '/files/Yifan_Jing_Research_Resume.pdf' | relative_url }}">CV <span class="file-type">(PDF)</span></a>
