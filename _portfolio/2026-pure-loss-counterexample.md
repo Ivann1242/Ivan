@@ -13,7 +13,7 @@ visual:
   caption: "Each blue curve holds the transmission level fixed and shows how the coefficient gap changes with decoding error, at one photon per mode. The red point marks 10% error on the selected curve."
   source: https://qiqc-op.com/problem/op_89fb664ba06ba5de/
   source_label: "Equations (4) and (5)"
-excerpt: "Yue Tu and I showed that a code with a fixed photon count can transmit more classical information than the proposed bound allows. We verified the disproof in Lean 4."
+excerpt: "Yue Tu and I determined the exact second-order term under a photon-number cutoff. Our fixed-photon codes beat the conjectured bound at every fixed error probability between zero and one half."
 collection: portfolio
 permalink: /portfolio/2026-pure-loss-counterexample/
 date: 2026-09-23
@@ -21,28 +21,32 @@ date: 2026-09-23
 
 Suppose half the light you send through a fiber reaches the receiver. You have *n* photons for *n* uses of the fiber. How many different messages can the receiver distinguish with 90% success?
 
-Yue Tu and I built a code that beats the conjectured limit. At this setting the conjecture subtracts about 1.76√n bits from the capacity term. Our code gives up only 1.02√n bits at the same order. The red point marks the 0.74 gap between the two coefficients.
+The conjecture would subtract about 1.76√n bits from the leading capacity term. Yue Tu and I showed that the optimal second-order penalty is about 1.02√n bits in this example. We achieve it by putting exactly the same number of photons into every message. At the initial setting, the red point marks the 0.74 gap between the two coefficients.
 
 {% include project-figure.html visual=page.visual %}
 
 ## Where did the bound come from?
 
-In 2014, Mark Wilde, Joseph Renes, and Saikat Guha analyzed a code for sending classical messages through a pure-loss bosonic channel. A choice among *M* messages carries log₂ *M* bits. Capacity determines the leading term in that bit count, proportional to *n*. Their calculation also gave a correction of order √n for a finite block. They asked whether the same expression could serve as a *converse*, an upper bound that every code must obey. [Original paper](https://arxiv.org/abs/1408.5328)
+In 2014, Mark Wilde, Joseph Renes, and Saikat Guha studied a Gaussian ensemble of coherent optical states with a budget on the mean photon number. For *M* possible messages, the bit count is log₂ *M*. Their code achieves *n* times capacity to leading order. Its √n correction reflects the photon-number fluctuations of thermal light. Could the same expression serve as a *converse*, an upper bound that every code must obey? [Original paper](https://arxiv.org/abs/1408.5328)
 
-The version in the QIQCOP Zoo made the photon budget precise. It requires the probability of exceeding the budget to fall at least exponentially fast as *n* grows. Our code has zero probability of exceeding it because every message uses exactly the allowed number of photons. [Conjecture, equations (2)–(4)](https://qiqc-op.com/problem/op_89fb664ba06ba5de/)
+The QIQCOP Zoo posed a precise version with a photon-number cutoff. For a randomly chosen message, the probability that the input exceeds the cutoff must fall at least exponentially fast as *n* grows. Our code uses exactly the allowed photon count in every codeword, so that probability is zero. [Conjecture, equations (2)–(4)](https://qiqc-op.com/problem/op_89fb664ba06ba5de/)
 
 ## Put the message in the mode
 
-With the photon count fixed, we still get to choose the optical mode the photons occupy. Think of a mode as a pattern spread across the *n* uses of the fiber. We choose a different pattern for each message and put all its photons into that pattern.
+We encode each message in a different collective optical mode, a pattern of amplitudes and phases spread across all *n* uses of the fiber. All the photons in a codeword occupy its chosen mode. If 47 survive the trip, those 47 still occupy that mode. The count itself has the same distribution for every message. The receiver counts the survivors, then distinguishes the possible patterns within that photon-number sector.
 
-If we send 100 photons through the half-transmitting fiber, the number that arrive follows a binomial distribution centered on 50. If 47 arrive, all 47 still occupy the mode we chose. The receiver counts the survivors, then uses a measurement designed for that count to distinguish the possible patterns.
+Now take 100 uses of the fiber at one photon per use. Our transmitter sends exactly 100 photons. The arrival count is binomial, with mean 50 and variance 25. The Gaussian ensemble behind the conjecture also delivers 50 photons on average. Its arrival count has variance 75. Fixing the input count leaves only the randomness of which photons survive the trip.
 
-## Why the gap grows with block length
+## How photon fluctuations turn into bits
 
-The variance that controls the √n correction is called the *dispersion*. In our half-transmitting example, the fixed-photon code has one third of the dispersion used in the conjecture. At 10% error, the correction multiplies the square root of that dispersion by the tenth percentile of a standard normal, about −1.28. A smaller dispersion takes fewer bits away. That accounts for the 0.74√n-bit gain in the opening example.
+Write η for the fraction of light transmitted and *x* for the mean number of photons received per mode. The variance that sets the √n correction in bits is called the *dispersion*. Under the cutoff, it equals the thermal dispersion multiplied by **(1 − η)/(1 + x)**. In our example η and *x* are both one half, so the factor is one third. At 10% error, the square root of the dispersion is multiplied by the tenth percentile of a standard normal, about −1.28. A smaller dispersion takes fewer bits away. At 50% error the multiplier vanishes and all the curves meet.
 
-The same sign argument works for every fixed error probability between zero and one half, every positive photon budget per mode, and every transmissivity strictly between zero and one. As the block grows, the √n gain eventually outgrows the logarithmic remainder allowed by the conjecture.
+At one million uses, keep the same 10% error budget and set the allowed input leakage to 2⁻ⁿ. Our finite-block bounds put the optimal bit count between **1,376,404 and 1,376,443 bits**. The first two terms of the conjecture give about **1,375,685 bits**. A logarithmic correction could absorb the difference at this one block length. The proof rules out every such correction because the gap grows as √n. [Finite-block bounds, equations (5) and (13)](https://github.com/Naixu-Guo/quantum-open-problems/blob/main/database/proofs/pure-loss-second-order.md)
 
-We verified the disproof in Lean 4 using the standard Fock-basis model of pure loss. In our written proof we also derive a matching upper bound, which pins down the dispersion with an O(log n) remainder in the bit count. [Lean 4 theorem](https://github.com/Ivann1242/pure-loss-second-order-lean/blob/af47f65fba5bd3c81d5e8f0bec45c8ce331e1d83/QIQCOP/MainGeneral.lean#L74) · [Full proof note](https://github.com/Naixu-Guo/quantum-open-problems/blob/main/database/proofs/pure-loss-second-order.md)
+## How close can any code get?
+
+In the manuscript, we combine the dimension of the low-photon output space with the probability of landing outside it. This gives an upper bound for any encoding, including a superposition of different photon counts. It matches our construction through the √n term for every fixed error probability strictly between zero and one. The remainder is O(log n) bits even when the allowed probability of exceeding the input cutoff is as large as a constant times 1/√n.
+
+In Lean 4 we verified the disproof for every transmissivity strictly between zero and one, every positive photon budget per mode, and every fixed error probability between zero and one half. The formal proof constructs codes with zero input leakage. Those codes already satisfy the Zoo’s cutoff and beat the proposed bound. [Lean 4 theorem](https://github.com/Ivann1242/pure-loss-second-order-lean/blob/86d3b5607d19c9de9d4c1698bd9e3c63d247856d/QIQCOP/MainGeneral.lean#L74)
 
 We submitted the proof on September 23, 2026. The next day, Naixu Guo merged it into the QIQCOP Zoo and marked the problem solved. [Zoo submission](https://github.com/Naixu-Guo/quantum-open-problems/pull/99)
