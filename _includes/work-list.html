@@ -2,9 +2,8 @@
   {% for entry in include.entries %}
     <article class="work-row{% if entry.visual %} work-row--illustrated{% endif %}">
       {% if entry.visual %}
-        {% assign defer_image = true %}{% assign lead_figure = false %}
-        {% if forloop.first %}{% assign defer_image = false %}{% assign lead_figure = include.featured %}{% endif %}
-        {% include research-figure.html visual=entry.visual url=entry.url defer=defer_image featured=lead_figure %}
+        {% assign defer_image = true %}{% if forloop.first %}{% assign defer_image = false %}{% endif %}
+        {% include research-figure.html visual=entry.visual url=entry.url defer=defer_image %}
       {% endif %}
       <div class="work-info">
         <div class="work-meta">

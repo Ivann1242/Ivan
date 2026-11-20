@@ -2,7 +2,7 @@
 <div class="research-figure"{% if visual.control %} data-study="{{ visual.image }}"{% if visual.image == 'tito-join' %} data-cycle="{{ site.data.tito_join.cycle | jsonify | escape }}"{% endif %}{% endif %}>
   <div class="figure-artboard">
     {% if include.url %}<a class="figure-link" href="{{ include.url | relative_url }}" tabindex="-1">{% endif %}
-      {% include research-image.html visual=visual detail=include.detail defer=include.defer featured=include.featured %}
+      {% include research-image.html visual=visual detail=include.detail defer=include.defer %}
       {% if visual.control %}<canvas width="720" height="432" aria-hidden="true" hidden></canvas>{% endif %}
     {% if include.url %}</a>{% endif %}
   </div>

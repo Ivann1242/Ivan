@@ -2,19 +2,22 @@
 {% assign stem = visual.image %}
 {% assign height = visual.height | default: 600 %}
 {% assign description = visual.alt %}
-{% assign sizes = '(max-width: 44rem) 90vw, (max-width: 68rem) 44vw, 29.5rem' %}
-{% if include.featured %}{% assign sizes = '(max-width: 44rem) 90vw, (max-width: 68rem) 52vw, 35.5rem' %}{% endif %}
 {% if include.detail %}
   {% assign stem = visual.detail_image | default: stem %}
   {% assign height = visual.detail_height | default: height %}
   {% assign description = visual.detail_alt | default: description %}
-  {% assign sizes = '(min-width: 52rem) 46rem, 90vw' %}
+  {% assign sizes = '(min-width: 89rem) 43rem, (min-width: 64rem) 49vw, (min-width: 52rem) 46rem, 90vw' %}
+  {% assign compact_media = '(max-width: 30rem)' %}
+{% elsif page.url == '/' %}
+  {% assign sizes = '(min-width: 89rem) 26rem, (min-width: 64rem) 30vw, (min-width: 54rem) 21rem, (min-width: 40rem) 39vw, 90vw' %}
+  {% assign compact_media = '(max-width: 30rem), (min-width: 40rem) and (max-width: 82rem)' %}
+{% else %}
+  {% assign sizes = '(min-width: 89rem) 21.5rem, (min-width: 64rem) 25vw, (min-width: 54rem) 21rem, (min-width: 40rem) 39vw, 90vw' %}
+  {% assign compact_media = '(max-width: 30rem), (min-width: 40rem)' %}
 {% endif %}
 {% assign path = '/images/research/' | append: stem | relative_url %}
 <picture>
   {% if visual.control %}
-    {% assign compact_media = '(max-width: 30rem)' %}
-    {% unless include.featured or include.detail %}{% assign compact_media = '(max-width: 30rem), (min-width: 44.01rem) and (max-width: 59rem)' %}{% endunless %}
     <source media="{{ compact_media }}" type="image/webp" width="720" height="500" srcset="{{ path }}-compact.webp">
   {% endif %}
   <source type="image/webp" srcset="{{ path }}-480.webp 480w, {{ path }}-1080.webp 1080w" sizes="{{ sizes }}">
