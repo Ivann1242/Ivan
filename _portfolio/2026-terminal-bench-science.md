@@ -1,7 +1,7 @@
 ---
 title: "Terminal Bench Science"
 topic: AI evaluation
-featured: true
+featured_order: 2
 visual:
   image: cambrian
   height: 648

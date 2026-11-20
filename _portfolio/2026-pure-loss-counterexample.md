@@ -4,7 +4,7 @@ format: blog
 byline: Yifan Jing
 article_date: 2026-11-19
 topic: Quantum information
-featured: true
+featured_order: 3
 visual:
   image: pure-loss
   height: 648

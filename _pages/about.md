@@ -36,7 +36,7 @@ redirect_from:
     <h2 id="news">Selected research</h2>
     <a class="text-link" href="{{ '/portfolio/' | relative_url }}">All projects <span aria-hidden="true">→</span></a>
   </header>
-  {% assign featured = site.portfolio | where: 'featured', true | sort: 'date' | reverse %}
+  {% assign featured = site.portfolio | where_exp: 'entry', 'entry.featured_order' | sort: 'featured_order' %}
   {% include work-list.html entries=featured level=3 gallery=true featured=true %}
 </section>
 

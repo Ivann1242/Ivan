@@ -4,6 +4,7 @@ format: blog
 byline: Yifan Jing
 article_date: 2026-11-20
 topic: Sequence models
+featured_order: 1
 visual:
   image: recall
   alt: "Mamba’s recall accuracy at 96 tokens falls from about three quarters with four possible keys to about one half with sixteen."
