@@ -3,7 +3,7 @@ title: "How sequence models learn associative recall"
 short_title: "Hybrid Transformer Analysis — Associative Recall"
 format: blog
 byline: Yifan Jing
-article_date: 2026-11-20
+article_date: 2025-12-22
 topic: Sequence models
 featured_order: 1
 visual:
