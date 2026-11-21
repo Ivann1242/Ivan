@@ -97,11 +97,13 @@ With adjacent values, Mamba reached 90% validation accuracy after 27 epochs. The
 
 {% include recall-plot.html plot=page.plots.learning %}
 
+At both gaps, Mamba, the hybrid, and RoPE crossed 90% within 60 epochs, well before the Transformer with learned absolute positions. The lead shifted from Mamba at one step to RoPE at five.
+
 The learned-position Transformer eventually answered all 990 adjacent-value questions correctly at length 32. On 31-token strings it scored **14.0%**. At length 33 it scored **39.7%**. Position 31 had appeared in every training string, but only position 32 had been asked to produce the answer. Across both sweeps, 32 was the only length at which this Transformer got every question right.
 
 {% include recall-plot.html plot=page.plots.positions %}
 
-Mamba got every question right at **all 93 tested lengths** with adjacent values (4–96 tokens) and **all 88** with a five-step gap (9–96). The hybrid finished at 95.7% and 100% at length 96. A larger gap even improved RoPE’s score there, from 15.5% to 40.9%, while the Transformer without explicit positions moved the other way, from 23.7% to 15.7%. Each gap had its own trained models.
+Mamba got every question right at **all 93 tested lengths** with adjacent values (4–96 tokens) and **all 88** with a five-step gap (9–96). The hybrid finished at 95.7% and 100% at length 96. A larger gap even improved RoPE’s score there, from 15.5% to 40.9%, while the Transformer without explicit positions moved the other way, from 23.7% to 15.7%. Even at the training length of 32, four intervening tokens cut its recall from 48.5% to 16.5%. Each gap had its own trained models.
 
 ## When the last token chooses the question
 {: #variable-keys}
@@ -115,6 +117,8 @@ Mamba’s four-key run reached nearly perfect validation accuracy within its 300
 Cutting the test length in half gave us a comparison I hadn’t expected. At 16 tokens, RoPE went from about 72% with four possible keys to 91% with sixteen. Mamba went from nearly 100% to 73% across the same settings. At 96 tokens, RoPE’s three runs were all below 25%. Mamba retained about 76%, 58%, and 48% as the set grew from four keys to eight and then sixteen.
 
 {% include recall-plot.html plot=page.plots.keys %}
+
+RoPE was near perfect with four keys at 32 tokens, yet at 16 it trailed the eight- and sixteen-key runs by about 20 percentage points. Four keys may have allowed a shortcut specific to the training length, though accuracy alone can’t tell us whether RoPE used one.
 
 ## What changes when attention follows Mamba?
 {: #hybrid-recall}
