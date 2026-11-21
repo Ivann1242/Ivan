@@ -531,6 +531,49 @@ html {
 }
 .document--blog .prose > p:first-child { color: var(--ink); font-size: 1.16em; line-height: 1.5; }
 .document--blog .project-figure { margin-block: 1.7rem 2.2rem; }
+.recall-exhibit {
+  container: recall-exhibit / inline-size;
+  max-inline-size: 45rem;
+  margin: 2rem auto 2.5rem;
+}
+.recall-plate {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding-block: 1.15rem;
+  border-block: 1px solid var(--rule);
+}
+.recall-plate img {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 28rem;
+  block-size: auto;
+  margin-inline: auto;
+}
+.recall-plate figcaption { display: grid; gap: .5rem; }
+.recall-plate-number {
+  justify-self: start;
+  color: var(--accent);
+  font: 600 .78rem/1.35 var(--sans);
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+.recall-plate-number:hover, .recall-plate-number:focus-visible { text-decoration: underline; }
+.recall-plate-title { color: var(--ink); font: 400 1.48rem/1.13 var(--serif); }
+.recall-plate-note, .recall-plate-sources { color: var(--muted); font-size: .92rem; line-height: 1.5; }
+.recall-plate-sources { font-size: .83rem; }
+.recall-plate-sources a { color: inherit; }
+.recall-contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.15rem;
+  margin-block: 1rem 1.6rem;
+  font-size: .93rem;
+}
+@container recall-exhibit (min-width: 38rem) {
+  .recall-plate { grid-template-columns: minmax(0, 28rem) minmax(11rem, 1fr); gap: 1.5rem; }
+}
 .citation { padding-block: .8rem; margin-top: 1.5rem; border-block: 1px solid var(--rule); }
 .citation summary { cursor: pointer; color: var(--ink); }
 .citation p { margin-top: .6rem; font-size: .95rem; }

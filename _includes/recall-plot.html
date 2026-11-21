@@ -1,9 +1,15 @@
 {% assign plot = include.plot %}
-{% assign path = '/images/research/' | append: plot.stem | relative_url %}
-<figure class="project-figure recall-plot" id="{{ plot.id }}">
-  <picture>
-    <source media="(max-width: 34rem)" srcset="{{ path }}-compact.webp" width="410" height="{{ plot.compact_height }}">
-    <img src="{{ path }}.webp" width="730" height="{{ plot.height }}" alt="{{ plot.alt | escape }}" loading="lazy" decoding="async">
-  </picture>
-  <figcaption>{{ plot.caption | escape }}</figcaption>
-</figure>
+{% assign path = '/images/research/associative-recall/' | append: plot.stem | relative_url %}
+<div class="recall-exhibit">
+  <figure class="recall-plate" id="{{ plot.id }}">
+    <img src="{{ path }}-560.webp" srcset="{{ path }}-560.webp 560w, {{ path }}-1120.webp 1120w"
+         sizes="(min-width: 32rem) 28rem, calc(100vw - 2.5rem)" width="560" height="420"
+         alt="{{ plot.alt | escape }}"{% unless include.eager %} loading="lazy"{% endunless %} decoding="async">
+    <figcaption>
+      <a class="recall-plate-number" href="{{ path }}-1120.webp" aria-label="Open full-size figure {{ plot.number }}. {{ plot.title | escape }}">Fig. {{ plot.number }} <span aria-hidden="true">↗</span></a>
+      <span class="recall-plate-title">{{ plot.title | escape }}</span>
+      <span class="recall-plate-note">{{ plot.caption | escape }}</span>
+      {% if plot.sources %}<span class="recall-plate-sources">{% for source in plot.sources %}{% unless forloop.first %} · {% endunless %}<a href="{{ page.study_archive }}/{{ source[1] }}">{{ source[0] | escape }}</a>{% endfor %}</span>{% endif %}
+    </figcaption>
+  </figure>
+</div>
